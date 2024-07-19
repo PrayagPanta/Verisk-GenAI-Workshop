@@ -29,7 +29,7 @@ pipeline = transformers.pipeline(
 )
 ```
 
-**3)Create Pipeline**
+**3) Create Pipeline**
 
 ```
 from langchain_huggingface.llms import HuggingFacePipeline
@@ -56,13 +56,14 @@ print(chain.invoke({"question": question}))
 ```
 question = "Hi there, I need something really funny, like a joke or a funny story, but make sure it's about animals because farm animals are hilarious. Thank you so much!"
 print(chain.invoke({"question": question}))
+```
 
-
+```
 question = "Explain gravity as if you are a pirate. Please restrict the output to about 100 words."
 print(chain.invoke({"question": question}))
+```
 
-
-
+```
 question = """Quick advice needed:
 
 • Issue: Forgot anniversary
@@ -71,21 +72,20 @@ question = """Quick advice needed:
 
 Help!"""
 print(chain.invoke({"question": question}))
+```
 
-
-
+```
 question = "Workout advice"
 print(chain.invoke({"question": question}))
+```
 
-
-
+```
 question = '''Generate a funny joke. Here is an example:
 Example: Q: Why don't scientists trust atoms? A: Because they make up everything!
 Now, generate another funny joke.'''
 
 print(chain.invoke({"question": question}))
 ```
-
 
 ```
 prompt = """
@@ -96,7 +96,6 @@ Go through the below examples and generate response for the prompt at the end in
 1. Candlelight ambiance.
 2. Homemade pasta (bonus points if you make it yourself!).
 3. A playlist that says "I'm suave but not trying too hard."
-```
 
 **Generated Output:**
 Alright, here's the recipe for a perfect date night: First, dim the lights until you can barely see your own cooking skills. Then, whip up some noodles like you're auditioning for an Italian grandma role. And lastly, cue up the tunes that scream "I'm smooth like butter but won't slip off your plate." Now go knock 'em dead (figuratively)!
@@ -121,4 +120,5 @@ Get ready for the ultimate movie night experience! First, channel your inner arc
 """
 
 print(chain.invoke({"question": prompt}))
+```
 
