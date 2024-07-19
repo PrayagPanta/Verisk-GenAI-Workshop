@@ -54,17 +54,22 @@ print(chain.invoke({"question": question}))
 ```
 
 **Effective Prompting Strategies:**
+
+**Clarifying your Requirements**
 ```
+
 question = "Hi there, I need something really funny, like a joke or a funny story, but make sure it's about animals because farm animals are hilarious. Thank you so much!"
 print(chain.invoke({"question": question}))
 ```
-
+**Using Personas**
 ```
+
 question = "Explain gravity as if you are a pirate. Please restrict the output to about 100 words."
 print(chain.invoke({"question": question}))
 ```
-
+**Use Delimiters for Distinct Input Parts**
 ```
+
 question = """Quick advice needed:
 
 • Issue: Forgot anniversary
@@ -74,12 +79,12 @@ question = """Quick advice needed:
 Help!"""
 print(chain.invoke({"question": question}))
 ```
-
+**Including Details in Queries**
 ```
 question = "Workout advice"
 print(chain.invoke({"question": question}))
 ```
-
+**One Shot Inference**
 ```
 question = '''Generate a funny joke. Here is an example:
 Example: Q: Why don't scientists trust atoms? A: Because they make up everything!
@@ -88,6 +93,7 @@ Now, generate another funny joke.'''
 print(chain.invoke({"question": question}))
 ```
 
+**Few Shot Inference**
 ```
 prompt = """
 Go through the below examples and generate response for the prompt at the end in similar manner.:
