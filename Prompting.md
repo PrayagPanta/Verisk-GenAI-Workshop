@@ -1,6 +1,7 @@
 **Change Type of Runtime to use GPU.**
+
+**1) Install required Dependencies**
 ```
-1)Install required Dependencies**
 !pip install -i https://pypi.org/simple/ bitsandbytes==0.43.1
 !pip install accelerate==0.32.1
 !pip install transformers==4.42.3
