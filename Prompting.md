@@ -1,6 +1,6 @@
 **Change Type of Runtime to use GPU.**
-
-**1)Install required Dependencies**
+```
+1)Install required Dependencies**
 !pip install -i https://pypi.org/simple/ bitsandbytes==0.43.1
 !pip install accelerate==0.32.1
 !pip install transformers==4.42.3
@@ -8,13 +8,17 @@
 !pip install langchain==0.2.6
 !pip install huggingface_hub==0.23.4
 !pip install langchain_huggingface==0.0.3
+```
 
+```
 import torch
 print(torch.cuda.is_available())
 print(torch.cuda.get_device_name(0))
-
+```
 
 **2) Import and dowload model:**
+
+```
 import transformers
 pipeline = transformers.pipeline(
     "text-generation",
@@ -23,7 +27,7 @@ pipeline = transformers.pipeline(
     model_kwargs={"torch_dtype": torch.bfloat16, "load_in_4bit": True},
     max_new_tokens=1024  # Increase the max tokens to your desired value
 )
-
+```
 
 **3)Create Pipeline**
 from langchain_huggingface.llms import HuggingFacePipeline
